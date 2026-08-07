@@ -3,36 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Solve left-to-right number puzzles in your browser." />
-    <title>GLA Math Mini-game Solver</title>
+    <meta name="description" content="Resolva quebra-cabeças de números da esquerda para a direita no navegador." />
+    <title>Resolvedor de Mini-jogo de Matemática GLA</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app-shell">
       <section class="card hero-card">
-        <p class="eyebrow">GLA Math Mini-game Solver</p>
-        <h1>Solve the puzzle in your browser</h1>
+        <p class="eyebrow">Resolvedor de Mini-jogo de Matemática GLA</p>
+        <h1>Resolva o quebra-cabeça no navegador</h1>
         <p class="intro">
-          Enter the numbers, available operators, and target result. The solver tries every left-to-right combination and shows the match that reaches your target.
+          Digite os números, os operadores disponíveis e o resultado desejado. O resolvedor tenta todas as combinações da esquerda para a direita e mostra a solução que alcança o alvo.
         </p>
       </section>
 
       <section class="card solver-card">
         <form id="solver-form">
-          <label for="numbers">Numbers</label>
-          <input id="numbers" name="numbers" type="text" inputmode="numeric" placeholder="Example: 3 5 6 1" required />
+          <label for="numbers">Números</label>
+          <input id="numbers" name="numbers" type="text" inputmode="numeric" placeholder="Exemplo: 3 5 6 1" required />
 
-          <label for="operators">Operators</label>
-          <input id="operators" name="operators" type="text" placeholder="Example: + - *" required />
+          <label for="operators">Operadores</label>
+          <input id="operators" name="operators" type="text" placeholder="Exemplo: + - *" required />
 
-          <label for="target">Target</label>
-          <input id="target" name="target" type="number" placeholder="Example: 47" required />
+          <label for="target">Alvo</label>
+          <input id="target" name="target" type="number" placeholder="Exemplo: 47" required />
 
-          <button type="submit">Solve puzzle</button>
+          <button type="submit">Resolver quebra-cabeça</button>
         </form>
 
         <div id="result" class="result" aria-live="polite">
-          Enter a puzzle to get started.
+          Digite um quebra-cabeça para começar.
         </div>
       </section>
     </main>

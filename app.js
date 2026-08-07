@@ -4,12 +4,12 @@ const resultBox = document.getElementById('result');
 function parseNumbers(input) {
   const raw = input.trim();
   if (!raw) {
-    throw new Error('Please enter at least one number.');
+    throw new Error('Digite pelo menos um número.');
   }
 
   const values = raw.split(/\s+/).map((token) => Number(token));
   if (values.some((value) => Number.isNaN(value))) {
-    throw new Error('Numbers must be integers separated by spaces.');
+    throw new Error('Os números devem ser inteiros separados por espaços.');
   }
 
   return values;
@@ -18,7 +18,7 @@ function parseNumbers(input) {
 function parseOperators(input) {
   const raw = input.trim();
   if (!raw) {
-    throw new Error('Please enter at least one operator.');
+    throw new Error('Digite pelo menos um operador.');
   }
 
   const normalized = [];
@@ -26,7 +26,7 @@ function parseOperators(input) {
 
   for (const token of raw.split(/\s+/)) {
     if (!validOperators.has(token)) {
-      throw new Error(`Unsupported operator '${token}'. Use +, -, *, or x.`);
+      throw new Error(`Operador não suportado '${token}'. Use +, -, *, ou x.`);
     }
     normalized.push(token.toUpperCase() === 'X' ? '*' : token);
   }
@@ -53,7 +53,7 @@ function getPermutations(items) {
 function solveLeftToRight(numbers, operators, target) {
   if (operators.length !== numbers.length - 1) {
     return {
-      error: 'The number of operators must be exactly one less than the number of values.'
+      error: 'A quantidade de operadores deve ser exatamente uma a menos que a quantidade de valores.'
     };
   }
 
@@ -85,7 +85,7 @@ function solveLeftToRight(numbers, operators, target) {
     }
   }
 
-  return { success: false, message: 'No solution found with those combinations.' };
+  return { success: false, message: 'Nenhuma solução foi encontrada com essas combinações.' };
 }
 
 form.addEventListener('submit', (event) => {
@@ -97,7 +97,7 @@ form.addEventListener('submit', (event) => {
     const target = Number(document.getElementById('target').value);
 
     if (Number.isNaN(target)) {
-      throw new Error('Target must be a valid number.');
+      throw new Error('O alvo deve ser um número válido.');
     }
 
     const result = solveLeftToRight(numbers, operators, target);
@@ -108,7 +108,7 @@ form.addEventListener('submit', (event) => {
     }
 
     if (result.success) {
-      resultBox.textContent = `SUCCESS! The solution is: ${result.expression}`;
+      resultBox.textContent = `SUCESSO! A solução é: ${result.expression}`;
     } else {
       resultBox.textContent = result.message;
     }

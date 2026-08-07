@@ -1,17 +1,17 @@
-# GLA Math Mini-game Solver
+# Resolvedor de Mini-jogo de Matemática GLA
 
-This project now includes a lightweight web app that solves left-to-right number puzzles in the browser.
+Este projeto agora inclui uma aplicação web leve que resolve quebra-cabeças de números da esquerda para a direita no navegador.
 
-## Run locally
+## Executar localmente
 
-Open [index.html](index.html) in a browser, or serve the folder with a simple static server:
+Abra [index.html](index.html) em um navegador, ou sirva a pasta com um servidor estático simples:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit http://localhost:8000.
+Em seguida, visite http://localhost:8000.
 
-## Deploy to GitHub Pages
+## Publicar no GitHub Pages
 
-The repository includes a GitHub Actions workflow that publishes the site to GitHub Pages whenever the main branch is updated.
+O repositório inclui um fluxo de trabalho do GitHub Actions que publica o site no GitHub Pages sempre que a branch principal for atualizada.
